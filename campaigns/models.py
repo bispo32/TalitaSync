@@ -27,3 +27,12 @@ class ChatGPTResponse(models.Model):
 
     def __str__(self):
         return f"Response to Request {self.request.id}: {self.response_text[:50]}"
+
+
+class CampaignPrompt(models.Model):
+    prompt = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Prompt at {self.created_at}: {self.prompt[:50]}"
+

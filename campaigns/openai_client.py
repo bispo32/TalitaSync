@@ -8,6 +8,7 @@ load_dotenv()
 # Definir a chave da API do OpenAI
 openai.api_key = os.getenv('sk-proj-JaTIlbV4K5UXaWBKmjx5T3BlbkFJTL5UNg37fAgfgaEPAl0w')
 
+
 def generate_text(prompt):
         try:
             response = openai.ChatCompletion.create(
